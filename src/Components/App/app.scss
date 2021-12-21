@@ -2,4 +2,7 @@
 
 .App {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  color: vars.$light-text;
 }
