@@ -1,6 +1,8 @@
+import './footer.scss';
+
 const Footer = () => {
     return (
-        <button>rules</button>
+        <button className="rules">rules</button>
     )
 }
 
