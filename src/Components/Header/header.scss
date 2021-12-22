@@ -1,0 +1,39 @@
+@use "../../styles/vars";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  border: 1px solid vars.$light-text;
+  border-radius: 0.5rem;
+  padding: vars.$gutter;
+
+  &__title {
+    line-height: 1.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  &__score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: vars.$light-text;
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    &__title {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1rem;
+      color: vars.$blue-text;
+    }
+
+    &__score {
+      color: vars.$dark-text;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  }
+}
