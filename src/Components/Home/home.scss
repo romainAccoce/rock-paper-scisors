@@ -8,5 +8,24 @@
 
   &__icons {
     display: flex;
+
+    &__sign {
+      &--rock {
+        position: relative;
+        bottom: 9rem;
+      }
+
+      &--paper {
+        position: relative;
+        bottom: 23rem;
+        right: 1rem;
+      }
+
+      &--scissors {
+        position: relative;
+        bottom: 23rem;
+        left: 1rem;
+      }
+    }
   }
 }

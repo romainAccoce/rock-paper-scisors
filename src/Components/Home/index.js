@@ -26,12 +26,14 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <img className="home__background" src={background} alt='triangle'/>
+            <img className='home__background' src={background} alt='triangle'/>
             <div className='home__icons'>
                 {
                     signs.map(
                         (sign) => (
-                            <Sign sign={sign}/>
+                            <div className={`home__icons__sign--${sign.name}`}>
+                                <Sign sign={sign} key={sign.name}/>
+                            </div>
                         ),
                     )
                 }
