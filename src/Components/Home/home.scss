@@ -4,48 +4,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 9 * vars.$gutter;
+  margin-top: 10 * vars.$gutter;
 
   &__icons {
     display: flex;
-    &__sign {
-      border-radius: 50%;
-      padding: 0.8rem;
-      display: flex;
-      justify-content: center;
-      transform: scale(1.6);
-
-      &--rock {
-        background: vars.$rock;
-        position: relative;
-        bottom: 6rem;
-        box-shadow: inset 0 -5px 0 #c7092c;
-      }
-
-      &--paper {
-        background: vars.$paper;
-        position: relative;
-        bottom: 26rem;
-        right: 3rem;
-        box-shadow: inset 0 -5px 0 #2949eb;
-      }
-
-      &--scissors {
-        background: vars.$scissors;
-        position: relative;
-        bottom: 26rem;
-        left: 3rem;
-        box-shadow: inset 0 -5px 0 #a76d01;
-      }
-
-      &__image-container {
-        border-radius: 50%;
-        background-color: vars.$light-text;
-        padding: 1.5rem 1.7rem;
-        display: flex;
-        justify-content: center;
-        box-shadow: inset 0 5px 0 rgb(207, 206, 206);
-      }
-    }
   }
 }

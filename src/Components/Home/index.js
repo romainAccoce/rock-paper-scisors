@@ -1,4 +1,7 @@
 import './home.scss';
+
+import Sign from '../Sign';
+
 import background from '../../assets/images/bg-triangle.svg';
 import rockIcon from '../../assets/images/icon-rock.svg';
 import paperIcon from '../../assets/images/icon-paper.svg';
@@ -28,11 +31,7 @@ const Home = () => {
                 {
                     signs.map(
                         (sign) => (
-                            <div className={`home__icons__sign home__icons__sign--${sign.name}`} key={sign.name}>
-                                <div className='home__icons__sign__image-container'>
-                                    <img className='homer__icons__sign__image-container__icon' src={sign.icon}/>
-                                </div>
-                            </div>
+                            <Sign sign={sign}/>
                         ),
                     )
                 }
