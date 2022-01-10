@@ -1,6 +1,6 @@
-export const RULES_MODAL = 'RULES_MODAL';
-export const rulesModal = () => (
+export const DISPLAY_RULES_MODAL = 'DISPLAY_RULES_MODAL';
+export const displayRulesModal = () => (
   {
-    type: RULES_MODAL,
+    type: DISPLAY_RULES_MODAL,
   }
 );
