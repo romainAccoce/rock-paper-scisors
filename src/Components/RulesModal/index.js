@@ -9,12 +9,14 @@ const RulesModal = () => {
     const dispatch = useDispatch();
 
     return (
-        <div className='rules-modal'>
-            <div className='rules-modal__header'>
-                <h2 className='rules-modal__header__title'>rules</h2>
-                <button className='rules-modal__header__button' onClick={ () => dispatch(displayRulesModal()) }>+</button>
-            </div>   
-            <img className='rules-modal__image' alt='rules description image' src={rulesImage} />
+        <div className='rules-container modal_animation'>
+            <div className='rules-container__modal'>
+                <div className='rules-container__modal__header'>
+                    <h2 className='rules-container__modal__header__title'>rules</h2>
+                    <button className='rules-container__modal__header__button' onClick={ () => dispatch(displayRulesModal()) }>+</button>
+                </div>   
+                <img className='rules-container__modal__image' alt='rules description image' src={rulesImage} />
+            </div>
         </div>
     );
 };
