@@ -1,0 +1,44 @@
+@use "../../styles/vars";
+
+.sign {
+  border-radius: 50%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  transform: scale(1.5);
+  transition: all 0.1s linear;
+  &:hover {
+    transform: scale(1.6);
+    cursor: pointer;
+  }
+
+  &--rock {
+    background: vars.$rock;
+    box-shadow: inset 0 -5px 0 #c7092c;
+  }
+
+  &--paper {
+    background: vars.$paper;
+    box-shadow: inset 0 -5px 0 #2949eb;
+  }
+
+  &--scissors {
+    background: vars.$scissors;
+    box-shadow: inset 0 -5px 0 #a76d01;
+  }
+
+  &__image-container {
+    border-radius: 50%;
+    background-color: vars.$light-text;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: inset 0 5px 0 rgb(207, 206, 206);
+    width: 6rem;
+    height: 6rem;
+
+    &__icon {
+      object-fit: scale-down;
+    }
+  }
+}
