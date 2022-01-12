@@ -13,8 +13,8 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      {displayRules && <RulesModal />}
       <Home />
+      {displayRules && <RulesModal />}
       <Footer />
     </div>
   );

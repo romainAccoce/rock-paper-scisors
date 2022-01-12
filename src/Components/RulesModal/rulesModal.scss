@@ -1,0 +1,27 @@
+@use "../../styles/vars";
+
+.rules-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: vars.$light-text;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  position: absolute;
+  top: 30%;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      color: vars.$dark-text;
+      font-weight: bold;
+    }
+
+    &__button {
+    }
+  }
+}
