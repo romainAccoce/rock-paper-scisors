@@ -2,6 +2,8 @@ import './home.scss';
 
 import Sign from '../Sign';
 
+import { useSelector } from 'react-redux';
+
 import background from '../../assets/images/bg-triangle.svg';
 import rockIcon from '../../assets/images/icon-rock.svg';
 import paperIcon from '../../assets/images/icon-paper.svg';
@@ -24,19 +26,39 @@ const Home = () => {
         },
     ];
 
+    const findPlayerSign = (playerChoice) => {
+        const result = signs.find((sign) => sign.name == playerChoice);
+        return result;
+    };
+
+    const { playerChoice } = useSelector((state) => state.game);
+
+
     return (
         <div className='home'>
             <img className='home__background' src={background} alt='triangle'/>
+
             <div className='home__icons'>
-                {
-                    signs.map(
-                        (sign) => (
-                            <div className={`home__icons__sign--${sign.name}`}>
-                                <Sign sign={sign} key={sign.name}/>
-                            </div>
-                        ),
+                {   
+                    (!playerChoice) && (
+                        signs.map(
+                            (sign) => (
+                                <div className={`home__icons__sign--${sign.name}`}>
+                                    <Sign sign={sign} key={sign.name}/>
+                                </div>
+                            ),
+                        )
                     )
                 }
+
+                {
+                    (playerChoice) && (
+                        <div className={`home__icons__sign--${playerChoice}`}>
+                            <Sign sign={signs.find((sign) => sign.name == playerChoice)} />
+                        </div>
+                    )
+                }
+
             </div>
         </div>
     );
