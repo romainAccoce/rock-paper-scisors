@@ -54,7 +54,7 @@ const Home = () => {
                 {
                     (playerChoice) && (
                         <div className={`home__icons__sign--${playerChoice}`}>
-                            <Sign sign={signs.find((sign) => sign.name == playerChoice)} />
+                            <Sign sign={signs.find((sign) => sign.name === playerChoice)} />
                         </div>
                     )
                 }

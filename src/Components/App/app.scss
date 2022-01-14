@@ -9,3 +9,8 @@
   color: vars.$light-text;
   padding: 2rem;
 }
+
+@media screen and (max-width: 600px) {
+  .App {
+  }
+}
