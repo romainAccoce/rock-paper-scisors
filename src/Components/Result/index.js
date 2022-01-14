@@ -1,11 +1,14 @@
 import './result.scss';
 
 import Sign from '../Sign';
+import { signs } from '../../selectors/game';
 
-const Result = () => {
+import { findPlayerSign } from '../../selectors/game';
+
+const Result = ({playerChoice}) => {
     return (
         <div className={`home__icons__sign--${playerChoice}`}>
-            <Sign sign={signs.find((sign) => sign.name === playerChoice)} />
+            <Sign sign={findPlayerSign(playerChoice)} />
         </div>
     )
 }
