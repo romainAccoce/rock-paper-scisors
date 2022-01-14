@@ -27,7 +27,7 @@ const Home = () => {
     ];
 
     const findPlayerSign = (playerChoice) => {
-        const result = signs.find((sign) => sign.name == playerChoice);
+        const result = signs.find((sign) => sign.name === playerChoice);
         return result;
     };
 
