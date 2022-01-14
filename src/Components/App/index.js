@@ -9,12 +9,13 @@ import { useSelector } from 'react-redux';
 const App = () => {
 
   const { displayRules } = useSelector((state) => state.displayOptions);
+  const { playerChoice } = useSelector((state) => state.game);
 
   return (
     <div className="App">
       <Header />
-      <Home />
-      {displayRules && <RulesModal />}
+      { !playerChoice && <Home /> }
+      { displayRules && <RulesModal /> }
       <Footer />
     </div>
   );
