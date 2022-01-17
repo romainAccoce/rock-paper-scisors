@@ -27,11 +27,16 @@
 
   @media screen and (max-width: 600px) {
     .home {
-      transform: scale(0.7);
-      margin-top: 3 * vars.$gutter;
-
       &__icons {
-        display: flex;
+        width: 100vw;
+        padding: 0 1rem 3rem;
+
+        &__sign {
+          &--rock {
+            align-self: flex-end;
+            margin-left: 30%;
+          }
+        }
       }
     }
   }
