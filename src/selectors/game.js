@@ -8,12 +8,12 @@ export const signs = [
         icon: paperIcon,
     },
     {
-        name: 'rock',
-        icon: rockIcon,
-    },
-    {
         name: 'scissors',
         icon: scissorsIcon,
+    },
+    {
+        name: 'rock',
+        icon: rockIcon,
     },
 ];
 

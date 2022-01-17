@@ -10,7 +10,7 @@ const Result = ({playerChoice}) => {
         <div className={`home__icons__sign--${playerChoice}`}>
             <Sign sign={findPlayerSign(playerChoice)} />
         </div>
-    )
-}
+    );
+};
 
 export default Result;

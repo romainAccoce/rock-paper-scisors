@@ -5,10 +5,12 @@
   padding: 0.8rem;
   display: flex;
   justify-content: center;
-  transform: scale(1.5);
+  // transform: scale(1.5);
+  width: 12rem;
+  height: 12rem;
   transition: all 0.1s linear;
   &:hover {
-    transform: scale(1.6);
+    transform: scale(1.1);
     cursor: pointer;
   }
 
