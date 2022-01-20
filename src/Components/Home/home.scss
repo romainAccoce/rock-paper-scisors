@@ -19,6 +19,11 @@
     height: 60%;
     position: absolute;
 
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
     &--rock {
       bottom: -1rem;
       left: 3rem;

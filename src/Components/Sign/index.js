@@ -1,14 +1,11 @@
 import './sign.scss';
-import { useDispatch } from 'react-redux';
-import { selectIcon } from '../../action/game';
 
 import PropTypes from 'prop-types';
 
 const Sign = ({sign}) => {
-  const dispatch = useDispatch();
 
     return (
-        <div className={`sign sign--${sign.name}`} key={sign.name} onClick={() => dispatch(selectIcon(sign.name))}>
+        <div className={`sign sign--${sign.name}`} key={sign.name} >
             <div className='sign__image-container'>
                 <img className='sign__image-container__icon' src={sign.icon}/>
             </div>

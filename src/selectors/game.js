@@ -17,7 +17,17 @@ export const signs = [
     },
 ];
 
-export const findPlayerSign = (playerChoice) => {
-    const result = signs.find((sign) => sign.name === playerChoice);
+export const findSign = (selection) => {
+    const result = signs.find((sign) => sign.name === selection);
     return result;
 };
+
+export const getRandomInt = (max) => {
+    return Math.floor(Math.random() * max);
+}
+
+export const findHouseChoice = () => {
+    const choice = getRandomInt(signs.length);
+    console.log(choice);
+    return signs[choice];
+}
