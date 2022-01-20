@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import Sign from '../Sign';
 
-import { findSign, findHouseChoice } from '../../selectors/game';
+import { findHouseChoice } from '../../selectors/game';
 import { computerPlay } from '../../action/game';
 
 const Result = () => {
@@ -15,7 +15,7 @@ const Result = () => {
     
     useEffect(() => {
     dispatch(computerPlay(houseChoice));
-    }, [playerChoice]);
+    }, []);
 
     return (
         <div className='result'>
@@ -28,7 +28,6 @@ const Result = () => {
                 <Sign className="result__sign-container__icon" sign={computerChoice} />
             </div>
         </div>
-
     );
 };
 
