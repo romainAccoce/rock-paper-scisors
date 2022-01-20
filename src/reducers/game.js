@@ -1,8 +1,8 @@
 import { SELECT_ICON, COMPUTER_PLAY } from "../action/game";
 
 const initialState = {
-  playerChoice: '',
-  computerChoice: '',
+  playerChoice: null,
+  computerChoice: {},
   score: 0,
 };
 
@@ -12,6 +12,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         playerChoice: action.value,
+      }
+      case  COMPUTER_PLAY:
+      return {
+        ...state,
+        computerChoice: action.value,
       }
     default:
       return state;

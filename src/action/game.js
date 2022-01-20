@@ -8,8 +8,8 @@ export const selectIcon = (value) => (
 
 export const COMPUTER_PLAY = 'COMPUTER_PLAY';
 export const computerPlay = (value) => (
-    {
-        type: COMPUTER_PLAY,
-        value,
-    }
+  {
+    type: COMPUTER_PLAY,
+    value,
+  }
 );

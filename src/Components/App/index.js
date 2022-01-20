@@ -16,7 +16,7 @@ const App = () => {
     <div className="App">
       <Header />
       { !playerChoice && <Home /> }
-      {  playerChoice && <Result playerChoice={playerChoice} /> }
+      { playerChoice && <Result /> }
       { displayRules && <RulesModal /> }
       <Footer />
     </div>

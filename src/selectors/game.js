@@ -28,6 +28,6 @@ export const getRandomInt = (max) => {
 
 export const findHouseChoice = () => {
     const choice = getRandomInt(signs.length);
-    console.log(choice);
+    console.log(signs[choice])
     return signs[choice];
 }

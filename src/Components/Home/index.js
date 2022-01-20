@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 import { selectIcon } from '../../action/game';
 
 
+
 const Home = () => {
 
   const dispatch = useDispatch();
@@ -18,7 +19,7 @@ const Home = () => {
             {   
                 signs.map(
                     (sign) => (
-                        <div className={`home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign.name))}> 
+                        <div className={`home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
                             <Sign sign={sign} key={sign.name}/>
                         </div>
                     ),
