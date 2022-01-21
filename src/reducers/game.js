@@ -1,10 +1,12 @@
-import { SELECT_ICON, COMPUTER_PLAY, SET_WINNER } from "../action/game";
+import { SELECT_ICON, COMPUTER_PLAY, SET_WINNER, RESET_CHOICES, DISPLAY_WINNER_BOX } from "../action/game";
 
 const initialState = {
   playerChoice: null,
   computerChoice: {},
   score: 0,
   setWinner: '',
+  showWinnerBox: false,
+
 };
 
 const reducer = (state = initialState, action = {}) => {
@@ -24,8 +26,21 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         setWinner: action.value,
       };
+      case  DISPLAY_WINNER_BOX:
+      return {
+        ...state,
+        showWinnerBox: !state.showWinnerBox,
+      };
 
-    default:
+      case  RESET_CHOICES:
+      return {
+        ...state,
+        playerChoice: null,
+        computerChoice: {},
+        showWinnerBox: !state.showWinnerBox,
+
+      };
+      default:
       return state;
   }
 };

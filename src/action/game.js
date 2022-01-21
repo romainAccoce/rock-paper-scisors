@@ -21,3 +21,17 @@ export const setWinner = (value) => (
     value,
   }
 );
+
+export const DISPLAY_WINNER_BOX = 'DISPLAY_WINNER_BOX';
+export const displayWinnerBox = () => (
+  {
+    type: DISPLAY_WINNER_BOX,
+  }
+);
+
+export const RESET_CHOICES = 'RESET_CHOICES';
+export const resetChoices = () => (
+  {
+    type: RESET_CHOICES,
+  }
+);

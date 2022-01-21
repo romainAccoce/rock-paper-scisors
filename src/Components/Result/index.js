@@ -6,14 +6,12 @@ import Sign from '../Sign';
 import WinnerBox from '../WinnerBox';
 
 import { compareResults } from '../../selectors/game';
-import { setWinner } from '../../action/game';
-import { displayWinnerBox } from '../../action/displayOptions';
+import { setWinner, displayWinnerBox } from '../../action/game';
 
 const Result = () => {
     
     const dispatch = useDispatch();
-    const { playerChoice, computerChoice } = useSelector((state) => state.game);
-    const { showWinnerBox } = useSelector((state) => state.displayOptions);
+    const { playerChoice, computerChoice, showWinnerBox } = useSelector((state) => state.game);
     
     useEffect(() => {
         dispatch(setWinner(compareResults(playerChoice.name, computerChoice.name)));
