@@ -30,17 +30,9 @@ const Result = () => {
             </div>
             <div className="result__sign-container">
                 <p className="result__sign-container__text">the house picked</p>
-                {
-                    !houseChoice && 
-                    <div className="result__sign-container__background">TEST</div>
-                }
-                {
-                    houseChoice && 
-                    <div className="result__sign-container__icon">
-                      <Sign sign={computerChoice} />
-                    </div>
-                }
-
+                <div className="result__sign-container__icon">
+                    { houseChoice && <Sign sign={computerChoice} /> } 
+                </div>
             </div>
         </div>
     );

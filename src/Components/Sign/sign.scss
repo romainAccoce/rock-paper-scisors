@@ -30,7 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 5px 0 rgb(207, 206, 206);
+    box-shadow: inset 0 8px 0 rgb(207, 206, 206);
     width: 75%;
     height: 75%;
 
@@ -51,11 +51,4 @@
       }
     }
   }
-}
-
-@media screen and (max-width: 600px) {
-  // .sign {
-  //   // width: 8.5rem;
-  //   // height: 8.5rem;
-  // }
 }
