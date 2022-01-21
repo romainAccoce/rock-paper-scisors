@@ -20,7 +20,6 @@
       border-radius: 50%;
       position: absolute;
       bottom: 2rem;
-      z-index: 0;
     }
 
     &__text {
@@ -32,7 +31,7 @@
     &__icon {
       width: 17rem;
       height: 17rem;
-      z-index: 1;
+      z-index: 0;
 
       &--house {
         animation: move 1s ease-in;
@@ -55,12 +54,22 @@
     gap: 2rem;
     align-items: flex-start;
     margin-bottom: 10rem;
+
     &__sign-container {
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
       justify-content: center;
       gap: 2rem;
+
+      &__background {
+        width: 6rem;
+        height: 6rem;
+        background-color: vars.$dark-text;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 4rem;
+      }
 
       &__text {
         white-space: nowrap;
