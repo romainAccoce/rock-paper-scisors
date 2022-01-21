@@ -13,3 +13,11 @@ export const computerPlay = (value) => (
     value,
   }
 );
+
+export const SET_WINNER = 'SET_WINNER';
+export const setWinner = (value) => (
+  {
+    type: SET_WINNER,
+    value,
+  }
+);

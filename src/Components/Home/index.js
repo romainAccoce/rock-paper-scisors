@@ -1,17 +1,25 @@
 import './home.scss';
 
 import Sign from '../Sign';
-import { signs } from '../../selectors/game';
+import { signs, findHouseChoice } from '../../selectors/game';
 import triangleImage from '../../assets/images/bg-triangle.svg';
 
-import { useDispatch } from 'react-redux';
-import { selectIcon } from '../../action/game';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { selectIcon, computerPlay } from '../../action/game';
 
 
 
 const Home = () => {
 
   const dispatch = useDispatch();
+  const houseChoice = findHouseChoice()
+  const { playerChoice } = useSelector((state) => state.game);
+
+  useEffect(() => {
+    dispatch(computerPlay(houseChoice));
+  }, [playerChoice]);
+
 
     return (
         <div className='home'>
