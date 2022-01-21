@@ -12,12 +12,12 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         playerChoice: action.value,
-      }
+      };
       case  COMPUTER_PLAY:
       return {
         ...state,
         computerChoice: action.value,
-      }
+      };
     default:
       return state;
   }
