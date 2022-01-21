@@ -4,7 +4,7 @@ const initialState = {
   playerChoice: null,
   computerChoice: {},
   score: 0,
-  setWinner: '',
+  winner: '',
   showWinnerBox: false,
 
 };
@@ -24,7 +24,7 @@ const reducer = (state = initialState, action = {}) => {
       case  SET_WINNER:
       return {
         ...state,
-        setWinner: action.value,
+        winner: action.value,
       };
       case  DISPLAY_WINNER_BOX:
       return {

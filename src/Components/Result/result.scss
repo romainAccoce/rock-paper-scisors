@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   gap: 5rem;
+  transition: all 1s linear;
 
   &__sign-container {
     display: flex;
@@ -29,10 +30,16 @@
     &__icon {
       width: 17rem;
       height: 17rem;
+      border-radius: 50%;
       z-index: 0;
 
       &--house {
         animation: move 1s ease-in;
+      }
+
+      &--winner {
+        box-shadow: rgba(59, 67, 99, 0.4) 0 0 0 1rem,
+          rgba(59, 67, 99, 0.3) 0 0 0 4rem, rgba(59, 67, 99, 0.2) 0 0 0 8rem;
       }
     }
 

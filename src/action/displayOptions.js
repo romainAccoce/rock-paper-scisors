@@ -5,9 +5,3 @@ export const displayRulesModal = () => (
   }
 );
 
-export const DISPLAY_WINNER_BOX = 'DISPLAY_WINNER_BOX';
-export const displayWinnerBox = () => (
-  {
-    type: DISPLAY_WINNER_BOX,
-  }
-);
