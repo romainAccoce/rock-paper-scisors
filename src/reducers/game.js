@@ -4,6 +4,9 @@ const initialState = {
   playerChoice: null,
   computerChoice: {},
   score: 0,
+  win: false,
+  draw: false,
+
 };
 
 const reducer = (state = initialState, action = {}) => {

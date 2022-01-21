@@ -7,7 +7,7 @@ const Footer = () => {
     const dispatch = useDispatch();
 
     return (
-        <button className="rules" onClick={() => dispatch(displayRulesModal())}>rules</button>
+        <div className="rules" onClick={() => dispatch(displayRulesModal())}>rules</div>
     )
 }
 

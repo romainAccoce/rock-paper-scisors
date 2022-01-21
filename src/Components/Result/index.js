@@ -3,21 +3,25 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Sign from '../Sign';
+import WinnerBox from '../WinnerBox';
 
 import { findHouseChoice } from '../../selectors/game';
 import { computerPlay } from '../../action/game';
+import { displayWinnerBox } from '../../action/displayOptions';
 
 const Result = () => {
     
     const dispatch = useDispatch();
     const houseChoice = findHouseChoice()
     const { playerChoice, computerChoice } = useSelector((state) => state.game);
+    const { showWinnerBox } = useSelector((state) => state.displayOptions);
     
     useEffect(() => {
         dispatch(computerPlay(houseChoice));
-        // const timer = setTimeout(() => {
-        // }, 1000);
-        // return () => clearTimeout(timer);
+        const timer = setTimeout(() => {
+            dispatch(displayWinnerBox());
+        }, 1000);
+        return () => clearTimeout(timer);
     }, []);
 
     return (
@@ -28,6 +32,9 @@ const Result = () => {
                     <Sign sign={playerChoice} />
                 </div>
             </div>
+            {
+                showWinnerBox && <WinnerBox />
+            }
             <div className="result__sign-container">
                 <div className="result__sign-container__background"></div>
                 <p className="result__sign-container__text">the house picked</p>
