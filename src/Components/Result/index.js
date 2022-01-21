@@ -14,10 +14,10 @@ const Result = () => {
     const { playerChoice, computerChoice } = useSelector((state) => state.game);
     
     useEffect(() => {
-        const timer = setTimeout(() => {
-            dispatch(computerPlay(houseChoice));
-        }, 1000);
-        return () => clearTimeout(timer);
+        dispatch(computerPlay(houseChoice));
+        // const timer = setTimeout(() => {
+        // }, 1000);
+        // return () => clearTimeout(timer);
     }, []);
 
     return (
@@ -29,8 +29,9 @@ const Result = () => {
                 </div>
             </div>
             <div className="result__sign-container">
+                <div className="result__sign-container__background"></div>
                 <p className="result__sign-container__text">the house picked</p>
-                <div className="result__sign-container__icon">
+                <div className="result__sign-container__icon result__sign-container__icon--house">
                     { houseChoice && <Sign sign={computerChoice} /> } 
                 </div>
             </div>
