@@ -24,11 +24,23 @@ const Result = () => {
         <div className='result'>
             <div className="result__sign-container">
                 <p className="result__sign-container__text">you picked</p>
-                <Sign className="result__sign-container__icon" sign={playerChoice} />
+                <div className="result__sign-container__icon">
+                    <Sign sign={playerChoice} />
+                </div>
             </div>
             <div className="result__sign-container">
                 <p className="result__sign-container__text">the house picked</p>
-                { houseChoice && <Sign className="result__sign-container__icon" sign={computerChoice} /> } 
+                {
+                    !houseChoice && 
+                    <div className="result__sign-container__background">TEST</div>
+                }
+                {
+                    houseChoice && 
+                    <div className="result__sign-container__icon">
+                      <Sign sign={computerChoice} />
+                    </div>
+                }
+
             </div>
         </div>
     );

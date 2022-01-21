@@ -34,10 +34,21 @@
     width: 75%;
     height: 75%;
 
+    &--empty {
+      background-color: vars.$dark-text;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+    }
+
     &__icon {
       object-fit: contain;
       width: 50%;
       height: 50%;
+
+      &--empty {
+        display: none;
+      }
     }
   }
 }
