@@ -28,7 +28,7 @@ const Home = () => {
             {   
                 (hardMode ? signsHardMode : signs).map(
                     (sign) => (
-                        <div className={hardMode ? `home__sign home__sign--hard-mode home__sign--${sign.name} home__sign home__sign--${sign.name}--hard-mode` : '`home__sign home__sign--${sign.name}'} onClick={() => dispatch(selectIcon(sign))}> 
+                        <div className={hardMode ? `home__sign home__sign--hard-mode home__sign--${sign.name} home__sign--${sign.name}--hard-mode` : `home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
                             <Sign sign={sign} key={sign.name}/>
                         </div>
                     ),

@@ -37,26 +37,25 @@
 
     &--rock {
       bottom: -1rem;
-      right: 0;
-
+      right: 3rem;
       &--hard-mode {
         bottom: -5rem;
         left: 12rem;
       }
     }
+
     &--paper {
       top: -3rem;
       left: -3rem;
-
       &--hard-mode {
         top: 4rem;
         left: 16rem;
       }
     }
+
     &--scissors {
       top: -3rem;
       right: -3rem;
-
       &--hard-mode {
         top: -4rem;
         right: 5rem;
