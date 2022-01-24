@@ -23,6 +23,16 @@
     box-shadow: inset 0 -5px 0 #a76d01;
   }
 
+  &--lizard {
+    background: vars.$lizard;
+    box-shadow: inset 0 -5px 0 #7847d3;
+  }
+
+  &--spock {
+    background: vars.$spock;
+    box-shadow: inset 0 -5px 0 #099db8;
+  }
+
   &__image-container {
     border-radius: 50%;
     background-color: vars.$light-text;

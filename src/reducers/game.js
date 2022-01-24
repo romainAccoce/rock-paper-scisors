@@ -6,7 +6,7 @@ const initialState = {
   score: 0,
   winner: '',
   showWinnerBox: false,
-  hardMode: false,
+  hardMode: true,
 
 };
 

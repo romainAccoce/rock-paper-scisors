@@ -2,15 +2,17 @@
 
 .rules {
   background: none;
-  border: solid 1px vars.$light-text;
-  border-radius: 0.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 0.9rem;
+  border: solid 0.2rem vars.$outline;
+  border-radius: 1rem;
   padding: 1rem 3rem;
   margin-left: auto;
   transition: all 0.1s linear;
   &:hover {
     cursor: pointer;
     background-color: #8a90ac;
-    border: solid 1px #8a90ac;
+    border: solid 0.2rem #8a90ac;
   }
 }
 

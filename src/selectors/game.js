@@ -1,6 +1,9 @@
 import rockIcon from '../assets/images/icon-rock.svg';
 import paperIcon from '../assets/images/icon-paper.svg';
 import scissorsIcon from '../assets/images/icon-scissors.svg';
+import lizardIcon from '../assets/images/icon-lizard.svg';
+import spockIcon from '../assets/images/icon-spock.svg';
+
 
 export const signs = [
     {
@@ -32,11 +35,11 @@ export const signsHardMode = [
     },
         {
         name: 'lizard',
-        icon: rockIcon,
+        icon: lizardIcon,
     },
         {
         name: 'spock',
-        icon: rockIcon,
+        icon: spockIcon,
     },
 ];
 

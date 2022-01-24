@@ -14,7 +14,7 @@ const Home = () => {
 
   const dispatch = useDispatch();
   const houseChoice = findHouseChoice()
-  const { playerChoice } = useSelector((state) => state.game);
+  const { playerChoice, hardMode } = useSelector((state) => state.game);
 
   useEffect(() => {
     dispatch(computerPlay(houseChoice));
@@ -25,6 +25,7 @@ const Home = () => {
         <div className='home'>
             <img className='home__background' src={triangleImage} />
             {   
+                !hardMode &&
                 signs.map(
                     (sign) => (
                         <div className={`home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
@@ -32,7 +33,17 @@ const Home = () => {
                         </div>
                     ),
                     )
-                }
+            }
+                        {   
+                hardMode &&
+                signsHardMode.map(
+                    (sign) => (
+                        <div className={`home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
+                            <Sign sign={sign} key={sign.name}/>
+                        </div>
+                    ),
+                    )
+            }
             </div>
     );
 };
