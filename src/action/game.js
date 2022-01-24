@@ -35,3 +35,12 @@ export const resetChoices = () => (
     type: RESET_CHOICES,
   }
 );
+
+export const SET_SCORE = 'SET_SCORE';
+export const setScore = (value) => (
+  {
+    type: SET_SCORE,
+    value,
+  }
+);
+

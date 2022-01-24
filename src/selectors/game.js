@@ -24,17 +24,14 @@ export const findSign = (selection) => {
 
 export const getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
-}
+};
 
 export const findHouseChoice = () => {
     const choice = getRandomInt(signs.length);
-    console.log(signs[choice]);
     return signs[choice];
-}
+};
 
 export const compareResults = (playerSign, computerSign) => {
-  console.log( "PlayerSign = "+ playerSign, "computerSign = " + computerSign);
-
   if (playerSign === computerSign) {
       return "it's a draw";
   } else if ((playerSign === 'rock' && computerSign === 'scissors') || (playerSign === 'paper' && computerSign === 'rock') || (playerSign === 'scissors' && computerSign === 'paper')) {
@@ -42,4 +39,15 @@ export const compareResults = (playerSign, computerSign) => {
   } else {
       return "you lose"
   };
-}
+};
+
+export const getNewScore = (message) => {
+    if (message === 'you win') {
+        return 1;
+    } else if (message === 'you lose') {
+        return -1;
+    } 
+    else {
+        return 0;
+    };
+};

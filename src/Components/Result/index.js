@@ -5,21 +5,23 @@ import { useSelector, useDispatch } from 'react-redux';
 import Sign from '../Sign';
 import WinnerBox from '../WinnerBox';
 
-import { compareResults } from '../../selectors/game';
-import { displayWinnerBox, setWinner } from '../../action/game';
+import { compareResults, getNewScore } from '../../selectors/game';
+import { displayWinnerBox, setWinner, setScore } from '../../action/game';
 
 const Result = () => {
     
     const dispatch = useDispatch();
-    const { playerChoice, computerChoice, showWinnerBox, winner } = useSelector((state) => state.game);
+    const { playerChoice, computerChoice, showWinnerBox, winner, score } = useSelector((state) => state.game);
     
     useEffect(() => {
         dispatch(setWinner(compareResults(playerChoice.name, computerChoice.name)));
         const timer = setTimeout(() => {
             dispatch(displayWinnerBox());
+            console.log(getNewScore(winner));
+            dispatch(setScore(getNewScore(winner)));
         }, 1000);
         return () => clearTimeout(timer);
-    }, []);
+    }, [winner]);
 
     return (
         <div className='result'>
