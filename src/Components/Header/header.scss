@@ -8,6 +8,7 @@
   border: 1px solid vars.$light-text;
   border-radius: 0.5rem;
   padding: vars.$gutter;
+  z-index: 1;
 
   &__score-container {
     display: flex;
