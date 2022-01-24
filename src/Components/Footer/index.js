@@ -12,9 +12,12 @@ const Footer = () => {
 
 
     return (
-        <div>
-            <ToggleButton isOn={hardMode} handleToggle={() => dispatch(setHardMode())} />
-            <div className="rules" onClick={() => dispatch(displayRulesModal())}>rules</div>
+        <div className='footer'>
+            <div className='footer__hard-mode-switch'>
+                <p>hard mode</p>
+                <ToggleButton isOn={hardMode} handleToggle={() => dispatch(setHardMode())} />
+            </div>
+            <div className="footer__rules" onClick={() => dispatch(displayRulesModal())}>rules</div>
         </div>
     )
 }
