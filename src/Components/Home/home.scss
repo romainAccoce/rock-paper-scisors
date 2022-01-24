@@ -5,6 +5,11 @@
   height: 15rem;
   position: relative;
 
+  &--hard-mode {
+    width: 20rem;
+    height: 20rem;
+  }
+
   &__background {
     position: absolute;
     top: 0;
@@ -20,6 +25,11 @@
     position: absolute;
     transition: all 0.1s linear;
 
+    &--hard-mode {
+      width: 45%;
+      height: 45%;
+    }
+
     &:hover {
       transform: scale(1.1);
       cursor: pointer;
@@ -27,11 +37,11 @@
 
     &--rock {
       bottom: -1rem;
-      left: 3rem;
+      right: 0;
 
       &--hard-mode {
-        bottom: 0rem;
-        left: 0rem;
+        bottom: -5rem;
+        left: 12rem;
       }
     }
     &--paper {
@@ -39,8 +49,8 @@
       left: -3rem;
 
       &--hard-mode {
-        bottom: 0rem;
-        left: 0rem;
+        top: 4rem;
+        left: 16rem;
       }
     }
     &--scissors {
@@ -48,15 +58,18 @@
       right: -3rem;
 
       &--hard-mode {
-        top: 0rem;
-        right: 0rem;
+        top: -4rem;
+        right: 5rem;
       }
     }
 
     &--lizard {
+      bottom: -5rem;
     }
 
     &--spock {
+      top: 4rem;
+      left: -4rem;
     }
   }
 }

@@ -33,7 +33,7 @@ export const signsHardMode = [
         name: 'rock',
         icon: rockIcon,
     },
-        {
+    {
         name: 'lizard',
         icon: lizardIcon,
     },
