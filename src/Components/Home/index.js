@@ -2,7 +2,8 @@ import './home.scss';
 
 import Sign from '../Sign';
 import { signs, signsHardMode, findHouseChoice } from '../../selectors/game';
-import triangleImage from '../../assets/images/bg-triangle.svg';
+import triangleBackground from '../../assets/images/bg-triangle.svg';
+import pentagonBackground from '../../assets/images/bg-pentagon.svg';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
@@ -23,26 +24,15 @@ const Home = () => {
 
     return (
         <div className='home'>
-            <img className='home__background' src={triangleImage} />
+            <img className='home__background' src={hardMode ? pentagonBackground : triangleBackground } />
             {   
-                !hardMode &&
-                signs.map(
+                (hardMode ? signsHardMode : signs).map(
                     (sign) => (
-                        <div className={`home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
+                        <div className={hardMode ? `home__sign home__sign--${sign.name} home__sign home__sign--${sign.name}--hard-mode` : '`home__sign home__sign--${sign.name}'} onClick={() => dispatch(selectIcon(sign))}> 
                             <Sign sign={sign} key={sign.name}/>
                         </div>
                     ),
-                    )
-            }
-                        {   
-                hardMode &&
-                signsHardMode.map(
-                    (sign) => (
-                        <div className={`home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
-                            <Sign sign={sign} key={sign.name}/>
-                        </div>
-                    ),
-                    )
+                )
             }
             </div>
     );

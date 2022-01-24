@@ -28,14 +28,35 @@
     &--rock {
       bottom: -1rem;
       left: 3rem;
+
+      &--hard-mode {
+        bottom: 0rem;
+        left: 0rem;
+      }
     }
     &--paper {
       top: -3rem;
       left: -3rem;
+
+      &--hard-mode {
+        bottom: 0rem;
+        left: 0rem;
+      }
     }
     &--scissors {
       top: -3rem;
       right: -3rem;
+
+      &--hard-mode {
+        top: 0rem;
+        right: 0rem;
+      }
+    }
+
+    &--lizard {
+    }
+
+    &--spock {
     }
   }
 }
