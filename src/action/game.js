@@ -44,3 +44,10 @@ export const setScore = (value) => (
   }
 );
 
+export const SET_HARD_MODE = 'SET_HARD_MODE';
+export const setHardMode = () => (
+  {
+    type: SET_HARD_MODE,
+  }
+);
+

@@ -1,4 +1,4 @@
-import { SELECT_ICON, COMPUTER_PLAY, SET_WINNER, RESET_CHOICES, DISPLAY_WINNER_BOX, SET_SCORE } from "../action/game";
+import { SELECT_ICON, COMPUTER_PLAY, SET_WINNER, RESET_CHOICES, DISPLAY_WINNER_BOX, SET_SCORE, SET_HARD_MODE } from "../action/game";
 
 const initialState = {
   playerChoice: null,
@@ -6,6 +6,7 @@ const initialState = {
   score: 0,
   winner: '',
   showWinnerBox: false,
+  hardMode: false,
 
 };
 
@@ -44,8 +45,14 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         score: state.score + action.value,
       };
+            case  SET_HARD_MODE:
+      return {
+        ...state,
+        hardMode: !state.hardMode,
+      };
       default:
       return state;
+      
   }
 };
 

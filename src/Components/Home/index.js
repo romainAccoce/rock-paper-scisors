@@ -1,7 +1,7 @@
 import './home.scss';
 
 import Sign from '../Sign';
-import { signs, findHouseChoice } from '../../selectors/game';
+import { signs, signsHardMode, findHouseChoice } from '../../selectors/game';
 import triangleImage from '../../assets/images/bg-triangle.svg';
 
 import { useDispatch, useSelector } from 'react-redux';

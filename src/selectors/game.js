@@ -17,6 +17,29 @@ export const signs = [
     },
 ];
 
+export const signsHardMode = [
+    {
+        name: 'paper',
+        icon: paperIcon,
+    },
+    {
+        name: 'scissors',
+        icon: scissorsIcon,
+    },
+    {
+        name: 'rock',
+        icon: rockIcon,
+    },
+        {
+        name: 'lizard',
+        icon: rockIcon,
+    },
+        {
+        name: 'spock',
+        icon: rockIcon,
+    },
+];
+
 export const findSign = (selection) => {
     const result = signs.find((sign) => sign.name === selection);
     return result;
