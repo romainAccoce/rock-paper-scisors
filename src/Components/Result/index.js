@@ -25,7 +25,7 @@ const Result = () => {
         <div className='result'>
             <div className="result__sign-container">
                 <p className="result__sign-container__text">you picked</p>
-                <div className={(winner === "you win") ? "result__sign-container__icon result__sign-container__icon--winner" : "result__sign-container__icon"}  >
+                <div className={((winner === "you win") && showWinnerBox) ? "result__sign-container__icon result__sign-container__icon--winner" : "result__sign-container__icon"}  >
                     <Sign sign={playerChoice} />
                 </div>
             </div>
@@ -35,7 +35,7 @@ const Result = () => {
             <div className="result__sign-container">
                 <div className="result__sign-container__background"></div>
                 <p className="result__sign-container__text">the house picked</p>
-                <div className={(winner === "you lose") ? "result__sign-container__icon result__sign-container__icon--winner result__sign-container__icon--house" : "result__sign-container__icon result__sign-container__icon--house"} >
+                <div className={((winner === "you lose") && showWinnerBox) ? "result__sign-container__icon result__sign-container__icon--winner result__sign-container__icon--house" : "result__sign-container__icon result__sign-container__icon--house"} >
                     { computerChoice && <Sign sign={computerChoice} /> } 
                 </div>
             </div>
