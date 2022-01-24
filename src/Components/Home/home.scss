@@ -73,3 +73,9 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .home {
+    transform: scale(0.7) translate(-0.5rem, -1rem);
+  }
+}
