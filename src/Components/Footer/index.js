@@ -8,15 +8,18 @@ import ToggleButton from '../ToggleButton';
 
 const Footer = () => {
     const dispatch = useDispatch();
-      const { hardMode } = useSelector((state) => state.game);
+      const { hardMode, playerChoice } = useSelector((state) => state.game);
 
 
     return (
         <div className='footer'>
-            <div className='footer__hard-mode-switch'>
-                <p>lizard spock</p>
-                <ToggleButton isOn={hardMode} handleToggle={() => dispatch(setHardMode())} />
-            </div>
+            {
+                !playerChoice &&
+                <div className='footer__hard-mode-switch'>
+                    <p>lizard spock</p>
+                    <ToggleButton isOn={hardMode} handleToggle={() => dispatch(setHardMode())} />
+                </div>
+            }
             <div className="footer__rules" onClick={() => dispatch(displayRulesModal())}>rules</div>
         </div>
     )
