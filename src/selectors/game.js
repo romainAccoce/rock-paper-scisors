@@ -52,9 +52,9 @@ export const getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
 };
 
-export const findHouseChoice = () => {
-    const choice = getRandomInt(signs.length);
-    return signs[choice];
+export const findHouseChoice = (signsData) => {
+    const choice = getRandomInt(signsData.length);
+    return signsData[choice];
 };
 
 export const compareResults = (playerSign, computerSign) => {
