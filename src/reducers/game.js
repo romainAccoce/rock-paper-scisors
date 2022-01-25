@@ -48,7 +48,7 @@ const reducer = (state = initialState, action = {}) => {
       case  SET_HARD_MODE:
       return {
         ...state,
-        hardMode: !state.hardMode,
+        hardMode: action.value,
       };
       case  RESET_SCORE:
       return {

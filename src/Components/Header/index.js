@@ -12,6 +12,7 @@ const Header = () => {
     const { score, hardMode } = useSelector((state) => state.game);
 
     useEffect(() => {
+        dispatch(resetScore());
         dispatch(setScore(JSON.parse(localStorage.getItem('scoreLS'))));
     }, []);
 

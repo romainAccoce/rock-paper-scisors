@@ -26,7 +26,7 @@ const Footer = () => {
                 !playerChoice &&
                 <div className='footer__hard-mode-switch'>
                     <p>lizard spock</p>
-                    <ToggleButton isOn={hardMode} handleToggle={() => dispatch(setHardMode())} />
+                    <ToggleButton isOn={hardMode} handleToggle={() => dispatch(setHardMode(!hardMode))} />
                 </div>
             }
             <div className="footer__rules" onClick={() => dispatch(displayRulesModal())}>rules</div>
