@@ -17,14 +17,26 @@
     background-color: vars.$light-text;
     border-radius: 0.5rem;
     padding: 1rem 4rem;
+
+    &:hover {
+      background-color: vars.$light-grey;
+      cursor: pointer;
+    }
+
     &__title {
       color: vars.$blue-text;
     }
 
     &__score {
       color: vars.$dark-text;
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: bold;
+    }
+
+    &__text {
+      color: vars.$dark-text;
+      font-size: 0.5rem;
+      margin-top: 0.5rem;
     }
   }
 }

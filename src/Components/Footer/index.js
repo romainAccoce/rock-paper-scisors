@@ -14,7 +14,7 @@ const Footer = () => {
     return (
         <div className='footer'>
             <div className='footer__hard-mode-switch'>
-                <p>hard mode</p>
+                <p>lizard spock</p>
                 <ToggleButton isOn={hardMode} handleToggle={() => dispatch(setHardMode())} />
             </div>
             <div className="footer__rules" onClick={() => dispatch(displayRulesModal())}>rules</div>

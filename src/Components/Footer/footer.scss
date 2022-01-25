@@ -20,8 +20,7 @@
     transition: all 0.1s linear;
     &:hover {
       cursor: pointer;
-      background-color: #8a90ac;
-      border: solid 0.2rem #8a90ac;
+      background-color: vars.$outline;
     }
   }
 }

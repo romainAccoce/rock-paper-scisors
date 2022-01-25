@@ -24,7 +24,7 @@
   position: relative;
   transition: background-color 0.2s;
   &:hover {
-    background: #d5d5d5;
+    background: vars.$light-grey;
   }
 }
 

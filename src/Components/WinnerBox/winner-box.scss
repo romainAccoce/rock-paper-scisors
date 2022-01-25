@@ -25,8 +25,9 @@
     padding: 1rem;
 
     &:hover {
-      cursor: pointer;
+      background-color: vars.$light-grey;
       color: red;
+      cursor: pointer;
     }
   }
 }
