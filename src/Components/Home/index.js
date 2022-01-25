@@ -13,12 +13,12 @@ import { selectIcon, computerPlay } from '../../action/game';
 
 const Home = () => {
 
-  const dispatch = useDispatch();
-  const { playerChoice, hardMode } = useSelector((state) => state.game);
+    const dispatch = useDispatch();
+    const { playerChoice, hardMode } = useSelector((state) => state.game);
 
-  useEffect(() => {
-    dispatch(computerPlay(findHouseChoice(hardMode ? signsHardMode : signs)));
-  }, [playerChoice]);
+    useEffect(() => {
+        dispatch(computerPlay(findHouseChoice(hardMode ? signsHardMode : signs)));
+    }, [playerChoice]);
 
 
     return (

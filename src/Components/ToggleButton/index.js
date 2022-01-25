@@ -1,7 +1,4 @@
 import PropTypes from 'prop-types';
-// import { IoMdSunny } from '@react-icons/all-files/io/IoMdSunny';
-// import { BsMoon } from '@react-icons/all-files/bs/BsMoon';
-
 import './toggle-button.scss';
 
 const ToggleButton = ({ isOn, handleToggle }) => (
