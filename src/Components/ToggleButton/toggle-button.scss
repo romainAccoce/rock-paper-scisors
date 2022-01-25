@@ -24,7 +24,7 @@
   position: relative;
   transition: background-color 0.2s;
   &:hover {
-    background: vars.$outline;
+    background: #d5d5d5;
   }
 }
 
@@ -44,7 +44,7 @@
 .react-switch-checkbox:checked + .react-switch-label .react-switch-button {
   left: calc(100% - 2px);
   transform: translateX(-100%);
-  background-color: vars.$lizard;
+  background-color: #44a775;
 }
 
 .react-switch-label:active .react-switch-button {
