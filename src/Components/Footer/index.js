@@ -10,9 +10,10 @@ import ToggleButton from '../ToggleButton';
 const Footer = () => {
     const dispatch = useDispatch();
     const { hardMode, playerChoice } = useSelector((state) => state.game);
-
+    
     useEffect(() => {
         dispatch(setHardMode(JSON.parse(localStorage.getItem('hardModeLS'))));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {

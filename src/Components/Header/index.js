@@ -14,6 +14,7 @@ const Header = () => {
     useEffect(() => {
         dispatch(resetScore());
         dispatch(setScore(JSON.parse(localStorage.getItem('scoreLS'))));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {

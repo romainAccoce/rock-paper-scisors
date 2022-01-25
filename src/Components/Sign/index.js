@@ -7,7 +7,7 @@ const Sign = ({sign}) => {
     return (
         <div className={`sign sign--${sign.name}`} key={sign.name} >
             <div className= {sign.name ? 'sign__image-container' : 'sign__image-container--empty'}>
-                <img className= {sign.name ? 'sign__image-container__icon' : 'sign__image-container__icon--empty'} src={sign.icon}/>
+                <img className= {sign.name ? 'sign__image-container__icon' : 'sign__image-container__icon--empty'} src={sign.icon} alt={sign.name}/>
             </div>
         </div>
     );

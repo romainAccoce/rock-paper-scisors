@@ -18,16 +18,17 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(computerPlay(findHouseChoice(hardMode ? signsHardMode : signs)));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [playerChoice]);
 
 
     return (
         <div className={hardMode ? 'home home--hard-mode' : 'home'}>
-            <img className='home__background' src={hardMode ? pentagonBackground : triangleBackground } />
+            <img className='home__background' src={hardMode ? pentagonBackground : triangleBackground } alt={'background'} />
             {   
                 (hardMode ? signsHardMode : signs).map(
                     (sign) => (
-                        <div className={hardMode ? `home__sign home__sign--hard-mode home__sign--${sign.name} home__sign--${sign.name}--hard-mode` : `home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
+                        <div key={sign.name} className={hardMode ? `home__sign home__sign--hard-mode home__sign--${sign.name} home__sign--${sign.name}--hard-mode` : `home__sign home__sign--${sign.name}`} onClick={() => dispatch(selectIcon(sign))}> 
                             <Sign sign={sign} key={sign.name}/>
                         </div>
                     ),

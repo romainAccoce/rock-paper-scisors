@@ -5,11 +5,10 @@ import Footer from '../Footer';
 import RulesModal from '../RulesModal';
 import Result from '../Result';
 
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 const App = () => {
 
-  const dispatch = useDispatch();
   const { displayRules } = useSelector((state) => state.displayOptions);
   const { playerChoice } = useSelector((state) => state.game);
 

@@ -11,7 +11,7 @@ import { displayWinnerBox, setWinner, setScore } from '../../action/game';
 const Result = () => {
     
     const dispatch = useDispatch();
-    const { playerChoice, computerChoice, showWinnerBox, winner, score } = useSelector((state) => state.game);
+    const { playerChoice, computerChoice, showWinnerBox, winner } = useSelector((state) => state.game);
     
     useEffect(() => {
         dispatch(setWinner(compareResults(playerChoice.name, computerChoice.name)));
@@ -21,6 +21,7 @@ const Result = () => {
             dispatch(setScore(getNewScore(winner)));
         }, 1000);
         return () => clearTimeout(timer);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [winner]);
 
     return (

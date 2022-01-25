@@ -17,7 +17,7 @@ const RulesModal = () => {
                     <h2 className='rules-container__modal__header__title'>rules</h2>
                     <button className='rules-container__modal__header__button' onClick={ () => dispatch(displayRulesModal()) }>+</button>
                 </div>   
-                <img className='rules-container__modal__image' alt='rules description image' src={hardMode ? rulesImageHardMode : rulesImage} />
+                <img className='rules-container__modal__image' alt='rules description' src={hardMode ? rulesImageHardMode : rulesImage} />
             </div>
         </div>
     );
