@@ -1,31 +1,80 @@
 @use "../../styles/vars";
 
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: 10 * vars.$gutter;
+  width: 15rem;
+  height: 15rem;
+  position: relative;
 
-  &__icons {
-    display: flex;
+  &--hard-mode {
+    width: 20rem;
+    height: 20rem;
+  }
 
-    &__sign {
-      &--rock {
-        position: relative;
-        bottom: 9rem;
-      }
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
-      &--paper {
-        position: relative;
-        bottom: 23rem;
-        right: 1rem;
-      }
+  &__sign {
+    width: 60%;
+    height: 60%;
+    position: absolute;
+    transition: all 0.1s linear;
 
-      &--scissors {
-        position: relative;
-        bottom: 23rem;
-        left: 1rem;
+    &--hard-mode {
+      width: 45%;
+      height: 45%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    &--rock {
+      bottom: -1rem;
+      right: 3rem;
+      &--hard-mode {
+        bottom: -5rem;
+        left: 12rem;
       }
     }
+
+    &--paper {
+      top: -3rem;
+      left: -3rem;
+      &--hard-mode {
+        top: 4rem;
+        left: 16rem;
+      }
+    }
+
+    &--scissors {
+      top: -3rem;
+      right: -3rem;
+      &--hard-mode {
+        top: -4rem;
+        right: 5rem;
+      }
+    }
+
+    &--lizard {
+      bottom: -5rem;
+    }
+
+    &--spock {
+      top: 4rem;
+      left: -4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    transform: scale(0.7) translate(-0.5rem, -1rem);
   }
 }

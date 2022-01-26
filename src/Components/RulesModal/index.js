@@ -1,12 +1,14 @@
 import './rulesModal.scss';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { displayRulesModal } from '../../action/displayOptions';
 
 import rulesImage from '../../assets/images/image-rules.svg';
+import rulesImageHardMode from '../../assets/images/image-rules-bonus.svg'
 
 const RulesModal = () => {
     const dispatch = useDispatch();
+  const { hardMode } = useSelector((state) => state.game);
 
     return (
         <div className='rules-container modal_animation'>
@@ -15,7 +17,7 @@ const RulesModal = () => {
                     <h2 className='rules-container__modal__header__title'>rules</h2>
                     <button className='rules-container__modal__header__button' onClick={ () => dispatch(displayRulesModal()) }>+</button>
                 </div>   
-                <img className='rules-container__modal__image' alt='rules description image' src={rulesImage} />
+                <img className='rules-container__modal__image' alt='rules description' src={hardMode ? rulesImageHardMode : rulesImage} />
             </div>
         </div>
     );

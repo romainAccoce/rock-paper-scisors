@@ -4,3 +4,4 @@ export const displayRulesModal = () => (
     type: DISPLAY_RULES_MODAL,
   }
 );
+

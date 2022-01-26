@@ -10,7 +10,7 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         displayRules: !state.displayRules,
-      }
+      };
     default:
       return state;
   }
