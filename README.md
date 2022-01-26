@@ -22,7 +22,7 @@ Users should be able to:
 - Play Rock, Paper, Scissors against the computer
 - Maintain the state of the score after refreshing the browser _(optional)_
 - **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
-- **Personal Bonus**: To go further, I've decided to offer the user a possibility to switch between classic or "lizard spock" mode. Like the score, the state of the chosen mode is persistent.
+- **Personal Bonus**: To go further, I've decided to offer the user a possibility to switch between classic or "lizard spock" mode. Like the score, the state of the chosen mode is persistent
 
 ### Screenshot
 
