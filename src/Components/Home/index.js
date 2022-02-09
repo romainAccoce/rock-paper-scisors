@@ -1,26 +1,18 @@
 import './home.scss';
 
 import Sign from '../Sign';
-import { findHouseChoice } from '../../selectors/game';
 import triangleBackground from '../../assets/images/bg-triangle.svg';
 import pentagonBackground from '../../assets/images/bg-pentagon.svg';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { selectIcon, computerPlay } from '../../action/game';
+import { selectIcon } from '../../action/game';
 
 
 
 const Home = () => {
 
     const dispatch = useDispatch();
-    const { playerChoice, hardMode, signs, signsHardMode, } = useSelector((state) => state.game);
-
-    useEffect(() => {
-        dispatch(computerPlay(findHouseChoice(hardMode ? signsHardMode : signs)));
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [playerChoice]);
-
+    const { hardMode, signs, signsHardMode } = useSelector((state) => state.game);
 
     return (
         <div className={hardMode ? 'home home--hard-mode' : 'home'}>
@@ -34,7 +26,7 @@ const Home = () => {
                     ),
                 )
             }
-            </div>
+        </div>
     );
 };
 

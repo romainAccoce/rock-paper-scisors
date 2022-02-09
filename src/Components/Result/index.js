@@ -5,24 +5,34 @@ import { useSelector, useDispatch } from 'react-redux';
 import Sign from '../Sign';
 import WinnerBox from '../WinnerBox';
 
-import { compareResults, getNewScore } from '../../selectors/game';
-import { displayWinnerBox, setWinner, setScore } from '../../action/game';
+import { compareResults, getNewScore, findHouseChoice } from '../../selectors/game';
+import { displayWinnerBox, setWinner, setScore, computerPlay } from '../../action/game';
 
 const Result = () => {
     
     const dispatch = useDispatch();
-    const { playerChoice, computerChoice, showWinnerBox, winner } = useSelector((state) => state.game);
-    
+    const { playerChoice, computerChoice, showWinnerBox, winner, signs, signsHardMode, hardMode } = useSelector((state) => state.game);
+
+    useEffect(() => {
+    const setComputerChoice = () => findHouseChoice(hardMode ? signsHardMode : signs);
+    const computerChoice = setComputerChoice();
+    dispatch(computerPlay(computerChoice));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [playerChoice]);
+
     useEffect(() => {
         dispatch(setWinner(compareResults(playerChoice.name, computerChoice.name)));
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [computerChoice]);
+
+    useEffect(() => {
         const timer = setTimeout(() => {
             dispatch(displayWinnerBox());
-            console.log(getNewScore(winner));
             dispatch(setScore(getNewScore(winner)));
         }, 1000);
         return () => clearTimeout(timer);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [winner]);
+}, [winner]);
 
     return (
         <div className='result'>
