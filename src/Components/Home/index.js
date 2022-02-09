@@ -1,7 +1,7 @@
 import './home.scss';
 
 import Sign from '../Sign';
-import { signs, signsHardMode, findHouseChoice } from '../../selectors/game';
+import { findHouseChoice } from '../../selectors/game';
 import triangleBackground from '../../assets/images/bg-triangle.svg';
 import pentagonBackground from '../../assets/images/bg-pentagon.svg';
 
@@ -14,7 +14,7 @@ import { selectIcon, computerPlay } from '../../action/game';
 const Home = () => {
 
     const dispatch = useDispatch();
-    const { playerChoice, hardMode } = useSelector((state) => state.game);
+    const { playerChoice, hardMode, signs, signsHardMode, } = useSelector((state) => state.game);
 
     useEffect(() => {
         dispatch(computerPlay(findHouseChoice(hardMode ? signsHardMode : signs)));

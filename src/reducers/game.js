@@ -1,3 +1,10 @@
+import rockIcon from '../assets/images/icon-rock.svg';
+import paperIcon from '../assets/images/icon-paper.svg';
+import scissorsIcon from '../assets/images/icon-scissors.svg';
+import lizardIcon from '../assets/images/icon-lizard.svg';
+import spockIcon from '../assets/images/icon-spock.svg';
+
+
 import { SELECT_ICON, COMPUTER_PLAY, SET_WINNER, RESET_CHOICES, DISPLAY_WINNER_BOX, SET_SCORE, SET_HARD_MODE, RESET_SCORE } from "../action/game";
 
 const initialState = {
@@ -7,7 +14,42 @@ const initialState = {
   winner: '',
   showWinnerBox: false,
   hardMode: false,
-
+  signs: [
+    {
+        name: 'paper',
+        icon: paperIcon,
+    },
+    {
+        name: 'scissors',
+        icon: scissorsIcon,
+    },
+    {
+        name: 'rock',
+        icon: rockIcon,
+    },
+  ],
+  signsHardMode: [
+    {
+        name: 'paper',
+        icon: paperIcon,
+    },
+    {
+        name: 'scissors',
+        icon: scissorsIcon,
+    },
+    {
+        name: 'rock',
+        icon: rockIcon,
+    },
+    {
+        name: 'lizard',
+        icon: lizardIcon,
+    },
+        {
+        name: 'spock',
+        icon: spockIcon,
+    },
+  ],
 };
 
 const reducer = (state = initialState, action = {}) => {
