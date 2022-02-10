@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://romacc-rock-paper-scissors.surge.sh/]
+- Live Site URL: [rock-paper-scissors](https://romacc-rock-paper-scissors.surge.sh/)
 
 ## My process
 
@@ -47,6 +47,4 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [Romain ACCOCE-CAPAR](https://www.your-site.com)
